@@ -1,0 +1,9 @@
+[wlcg]
+name=WLCG Repository
+baseurl=https://linuxsoft.cern.ch/wlcg/centos8/$basearch
+protect=1
+enabled=1
+# To use priorities you must have yum-priorities installed
+priority=1
+gpgcheck=1
+gpgkey=https://linuxsoft.cern.ch/wlcg/RPM-GPG-KEY-wlcg
