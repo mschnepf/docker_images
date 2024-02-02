@@ -5,7 +5,8 @@ MAINTAINER Matthias J. Schnepf  <matthias.jochen.schnepf@cern.ch>
 # CERN CA
 RUN update-ca-trust
 ADD repos/wlcg-centos8.repo /etc/yum.repos.d/
-
+ADD repos/egi-trustanchors.repo /etc/yum.repos.d/
+ADD locale.conf /etc/locale.conf
 
 RUN yum -y update && yum clean all
 #RUN yum -y install -y ca-policy-egi-core
@@ -23,7 +24,7 @@ libattr-devel libcap-devel libcom_err-devel libcurl-devel libdrm-devel \
 libdrm-devel libstdc++-devel libuuid-devel libxml2-devel lockdev-devel \
 libjpeg-turbo-devel netpbm-devel popt-devel \
 rpm-devel tcl-devel tk-devel openssh-clients \ 
-voms-clients-cpp wlcg-voms-cms \
+voms-clients-cpp wlcg-voms-cms ca-policy-egi-core \
 HEP_OSlibs time tar perl bzip2 gcc freetype glibc-headers glibc-devel \
 subversion make gcc gcc-c++ binutils patch wget python3 libxml2-devel \
 libX11-devel libXpm-devel libXft-devel libXext-devel bzip2-devel openssl-devel \
